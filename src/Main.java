@@ -12,7 +12,7 @@ public class Main {
 
             switch (select){
                 case 1:
-
+                    System.out.println("test");
                     break;
                 case 2:
                     break;
