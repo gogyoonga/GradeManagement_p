@@ -1,5 +1,6 @@
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 
 public class Student {
     String stuNo; //학번
@@ -19,6 +20,10 @@ public class Student {
             System.out.println(sub+" : "+sco);
                 }
         );}
+    public void getSubject(){
+        Set<String> SubSet = score.keySet();
+        for(String k : SubSet){System.out.print(k+" / ");}
+    }
 
     public void putScore(String sub) {
         score.put(sub, 0);
