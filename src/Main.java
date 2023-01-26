@@ -10,7 +10,7 @@ import java.util.Vector;
 public class Main {
     public static void main(String[] args) throws IOException {
 
-        final String PRO_CODE = "1234";
+        final String PRO_CODE = "pro1234";
 
 
         Scanner sc = new Scanner(System.in);
@@ -53,7 +53,7 @@ public class Main {
                                 student1.putSubject(subject);
                             }
                             //파일 저장
-                            File file = new File("./text.txt");
+                            File file = new File("./data.txt");
                             try(BufferedWriter writer = new BufferedWriter(new FileWriter(file))){
                                 writer.append(student1.getStuNo()+"/");
                                 writer.append(student1.getName()+"/");
@@ -79,7 +79,7 @@ public class Main {
 
                     // 파일 읽기
                     try{
-                        Path path = Paths.get("./text.txt");
+                        Path path = Paths.get("./data.txt");
                         List<String> lines = Files.readAllLines(path);
                         for(String line:lines){
                             System.out.println(line);
@@ -88,13 +88,13 @@ public class Main {
                         e.printStackTrace();
                     }
 
-                    //파일 저장
-                    File file = new File("./text.txt");
+                    /*//파일 저장
+                    File file = new File("./data.txt");
                     try(BufferedWriter writer = new BufferedWriter(new FileWriter(file))){
                         writer.append("");
                     } catch (IOException e) {
                         e.printStackTrace();
-                    }
+                    }*/
 
                     break;
                 default:
